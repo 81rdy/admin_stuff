@@ -6,7 +6,7 @@ sudo apt-get install \
     curl \
     gnupg \
     lsb-release;
-sudo mkdir -p /etc/apt/keyrings
+sudo mkdir -p /etc/apt/keyrings;
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg;
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
@@ -26,7 +26,7 @@ ufw allow 80;
 ufw allow 443;
 ufw reload;
 apt install docker-compose-plugin;
-echo "check if its 022 if not fix" 
+echo "check if its 022 if not fix";
 umask;
 sleep 10;
 cd /opt;
@@ -34,7 +34,7 @@ git clone https://github.com/mailcow/mailcow-dockerized;
 cd mailcow-dockerized;
 ./generate_config.sh;
 echo "edit mailcow.conf \n after that type docker compose pull and docker compose up -d";
-echo "change logo cd /opt/mailcow-dockerized/data/conf/sogo/sogo-full.svg \n"
-echo "restart the mail services: docker-compose restart memcached-mailcow sogo-mailcow"
+echo "change logo cd /opt/mailcow-dockerized/data/conf/sogo/sogo-full.svg \n";
+echo "restart the mail services: docker-compose restart memcached-mailcow sogo-mailcow";
 
 
